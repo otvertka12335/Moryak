@@ -58,6 +58,30 @@ body {
     color: white;
 }
 
+/*CSS FOR BUTTONS*/
+.header-buttons {
+margin-left: 14%;
+margin-top: -14%;
+}
+
+.header-buttons input{
+border-style: none;
+color: #fff;
+border-radius: 4px;
+font-size: 1.5em;
+width: 7em;
+height: 2.5em;
+position: relative;
+}
+
+.button-download {
+background-color: #FF5252;
+}
+
+.button-features {
+background-color: #0288D1;
+}
+
 @media (max-width: 1200px){
     .header {
         background-position: center;
@@ -87,27 +111,21 @@ body {
         display: none;
     }
     .header-phone img {
-        display:block;margin:0 auto;
+        display:block;
+        margin:0 auto;
     }
-}
 
-/*CSS FOR BUTTONS*/
-.header-buttons {
-    margin-left: 14%;
-    margin-top: -14%;
-}
-.header-buttons input{
-    border-style: none;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 1.5em;
-    width: 14%;
-    position: relative;
-}
-.button-download {
-    background-color: #FF5252;
-}
-.button-features {
-    background-color: #0288D1;
+    .header-buttons {
+        margin-left: 3em;
+        margin-top: 1.5em;
+    }
 
+    .button-features {
+        margin-left: 4em;
+    }
+
+    .header-buttons input {
+        width: 6em;
+        font-size: 1em;
+    }
 }
