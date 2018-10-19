@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background: url("../img/header.png");
+    height: 959px;
+}
+
+.header-phone img{
+    height: 605px;
+    z-index: 666;
+    background-repeat: no-repeat;
+    margin-top: 3%;
+    margin-left: 55%;
+    border-radius: 16px;
+    /*border-radius: 20%;*/
+}
+
+.header a {
+    float: left;
+    color: #FFFFFF;
+    margin: 0 auto;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 15rem;
+}
+
+.header-center {
+
+}
+
+.header-right {
+    float: right;
+    margin-right: 15rem;
+}
+
+.header-right img {
+    height: 30px;
+}
+
+.header a:hover {
+    background-color: #03A9F4;
+    color: white;
+}
+
+.header a.active {
+    background-color: #1976D2;
+    color: white;
+}
+
+@media (max-width: 1200px){
+    .header {
+        background-position: center;
+    }
+    .header a.logo {
+        margin-left: .5rem;
+    }
+    .header-right {
+        margin-right: .5rem;
+    }
+
+}
+@media (max-width: 880px) {
+    .header {
+        background-position: center;
+    }
+    .header a {
+        float: none;
+        text-align: left;
+        display: block;
+    }
+    .logo {
+        display: none;
+    }
+    .header-right {
+        float: none;
+        display: none;
+    }
+    .header-phone img {
+        display:block;margin:0 auto;
+    }
+}
+
+/*CSS FOR BUTTONS*/
+.header-buttons {
+    margin-left: 14%;
+    margin-top: -14%;
+}
+.header-buttons input{
+    border-style: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.5em;
+    width: 14%;
+    position: relative;
+}
+.button-download {
+    background-color: #FF5252;
+}
+.button-features {
+    background-color: #0288D1;
+
+}
