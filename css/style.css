@@ -2,55 +2,80 @@ body {
     margin: 0;
     padding: 0;
 }
-.header {
+
+.header{
     background: url("../img/header.png");
     height: 959px;
+    margin-top: 3em;
+    margin-bottom: 4em;
 }
 
-.header-phone img{
+.header-content {
+    top: 0;
+    width: 100%;
+    /*height: 53px;*/
+    z-index: 999;
+    position: fixed;
+    background-color: rgb(100, 140, 255);
+}
+
+@keyframes animation-nav-bar {
+    from {background-color: #4466c9}
+    to {background-color: #fff}
+}
+.header-content-scrolled {
+    animation-name: animation-nav-bar;
+    animation-duration: .75s;
+    background-color: #fff;
+}
+
+.header-content-scrolled a {
+    color: #000 !important;
+}
+
+.fun {
+    color: #fc6a42;
+}
+
+.weather {
+    color: #4466c9;
+}
+
+.header-phone img {
     height: 605px;
     z-index: 666;
     background-repeat: no-repeat;
     margin-top: 3%;
     margin-left: 55%;
     border-radius: 16px;
-    /*border-radius: 20%;*/
 }
 
 .header a {
     float: left;
     color: #FFFFFF;
     margin: 0 auto;
-    text-align: center;
+    /*text-align: center;*/
     padding: 14px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 25px;
     border-radius: 4px;
+    font-weight: bold;
 }
 
 .header a.logo {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: bold;
-    margin-left: 15rem;
+    margin-left: 12rem;
 }
 
 .header-center {
-
+    display: flex;
+    justify-content: center;
 }
 
-.header-right {
-    float: right;
-    margin-right: 15rem;
-}
-
-.header-right img {
-    height: 30px;
-}
-
-.header a:hover {
-    background-color: #03A9F4;
-    color: white;
+.header-center img {
+    height: 18px !important;
 }
 
 .header a.active {
@@ -58,66 +83,233 @@ body {
     color: white;
 }
 
-/*CSS FOR BUTTONS*/
-.header-buttons {
-margin-left: 14%;
-margin-top: -14%;
+.header-text {
+    font-size: 54px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 14%;
+    margin-top: -36%;
+    position: relative;
 }
 
-.header-buttons input{
-border-style: none;
-color: #fff;
-border-radius: 4px;
-font-size: 1.5em;
-width: 7em;
-height: 2.5em;
-position: relative;
+.header-buttons {
+    margin-left: 14%;
+    margin-top: 8%;
+}
+
+.header-buttons button {
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.1em;
+    width: 5.5em;
+    height: 2.3em;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
 }
 
 .button-download {
-background-color: #FF5252;
+    background-color: #fc6a42;
+    border: 1px solid;
+    border-color: #fc6a42;
+    margin-right: 0.8em;
+}
+.button-download:hover {
+    background-color: #fff;
+    color: #fc6a42;
 }
 
 .button-features {
-background-color: #0288D1;
+    background-color: #4466c9;
+    border: 1px solid;
+    border-color: #4466c9;
 }
 
-@media (max-width: 1200px){
+.button-features:hover {
+    background-color: #fff;
+    color: #4466c9;
+}
+/*SCREENSHOTS*/
+
+.screen-item {
+    margin-bottom: 185px;
+    display: flex;
+    align-items: center;
+}
+.screen-item .description {
+    padding-right: 65px;
+}
+.screen-item .title {
+    color: #648cff;
+    margin-bottom: 35px;
+}
+.screen-item .icon {
+    width: 120px;
+    height: 65px;
+    margin-bottom: 45px;
+}
+.screen-item .icon img {
+    object-fit: cover;
+}
+.screen-item .text {
+    font-size: 1.4em;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 4em;
+}
+
+.screen-item.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.wrap-weathers {
+    color: #c3cfe5;
+}
+.wrap-weathers .weather {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(180, 180, 180, 0.45);
+}
+.wrap-weathers .wet {
+    z-index: 3;
+}
+.wrap-weathers .wet:after {
+    content: "%";
+}
+.wrap-weathers .temp {
+    z-index: 2;
+    margin-left: -20px;
+}
+.wrap-weathers .temp:after {
+    content: "°";
+}
+.wrap-weathers .state {
+    z-index: 1;
+    margin-left: -20px;
+}
+.screen-title {
+    margin-bottom: 130px;
+}
+.screen-title .title {
+    color: #648cff;
+    text-align: center;
+}
+.screen-title .sub-title {
+    text-align: center;
+    color: #999;
+}
+/**/
+/*FEATURE*/
+.feature {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.feature-container {
+    margin-bottom: 45px;
+}
+.feature .title-box {
+    color: #353854;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 0 0 30px;
+}
+.feature .text {
+    color: #aeaeae;
+    font-size: 1em;
+}
+
+.feature > * {
+    width: 100%;
+}
+.icon-box {
+    margin-right: 20px;
+    flex-basis: 75px;
+}
+.icon-box img {
+    width: 80px;
+}
+.wrap-title {
+    margin-bottom: 95px;
+}
+.wrap-title .title {
+    color: #648cff;
+    text-align: center;
+}
+.wrap-title .sub-title {
+    text-align: center;
+    color: #999;
+}
+/**/
+@media (max-width: 1200px) {
     .header {
         background-position: center;
     }
+
     .header a.logo {
         margin-left: .5rem;
     }
-    .header-right {
-        margin-right: .5rem;
-    }
 
+    .header-text {
+        font-size: 54px;
+        font-weight: bold;
+        color: #fff;
+        margin-left: 6%;
+        margin-top: 2%;
+        position: absolute;
+    }
 }
+
 @media (max-width: 880px) {
     .header {
         background-position: center;
+        padding: 0;
+        margin: 0;
     }
+
+    .header-content {
+        position: relative;
+    }
+
+    .header-center {
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .header a {
         float: none;
         text-align: left;
         display: block;
     }
-    .logo {
-        display: none;
+
+    .nav-tab {
+        display: none !important;
     }
-    .header-right {
-        float: none;
-        display: none;
+    .social {
+        display: none !important;
     }
+
     .header-phone img {
-        display:block;
-        margin:0 auto;
+        display: block;
+        position: absolute;
+        z-index: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 65%;
     }
 
     .header-buttons {
-        margin-top: 1.5em;
-
+        margin-top: 18em;
     }
 
     .button-features {
