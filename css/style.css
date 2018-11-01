@@ -143,7 +143,7 @@ body {
     padding-right: 65px;
 }
 .screen-item .title {
-    color: #648cff;
+    color: #4466c9;
     margin-bottom: 35px;
 }
 .screen-item .icon {
@@ -157,7 +157,7 @@ body {
 .screen-item .text {
     font-size: 1.4em;
     height: 150px;
-    overflow: hidden;
+    overflow: inherit;
     margin-bottom: 4em;
 }
 
@@ -201,7 +201,7 @@ body {
     margin-bottom: 130px;
 }
 .screen-title .title {
-    color: #648cff;
+    color: #4466c9;
     text-align: center;
 }
 .screen-title .sub-title {
@@ -243,7 +243,7 @@ body {
     margin-bottom: 95px;
 }
 .wrap-title .title {
-    color: #648cff;
+    color: #4466c9;
     text-align: center;
 }
 .wrap-title .sub-title {
@@ -269,7 +269,77 @@ body {
         position: absolute;
     }
 }
-
+/*SLIDER*/
+.slider li {
+    box-shadow: 0 0 50px #ced4da;
+}
+.slider ul {
+    left: auto !important;
+    top: auto !important;
+    margin: 0 auto !important;
+}
+.slider .left {
+    font-size: 50px;
+    color: #c3cfe5;
+    left: -100px !important;
+}
+.slider .right {
+    font-size: 50px;
+    color: #c3cfe5;
+    right: -100px !important;
+}
+/**/
+/*COMMENT*/
+.comment {
+    position: relative;
+    padding: 100px 25px;
+}
+.comment .text {
+    padding: 24px 0;
+    font-size: 1.3em;
+}
+.comment:before {
+    position: absolute;
+    font-size: 8rem;
+    color: #4466c9;
+}
+.comment:before {
+    content: "“";
+    top: 25px;
+    left: 10px;
+}
+/**/
+/*PRE FOOTER*/
+.pre-footer {
+    background-color: rgb(100, 140, 255);
+    padding-top: 4rem;
+    color: white;
+}
+.pre-footer .item-links {
+    padding: 4rem 0;
+}
+.pre-footer .item-link {
+    width: 195px;
+    display: inline-block;
+}
+.pre-footer .title {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+.pre-footer .text {
+    font-size: 1.2em;
+    width: 75%;
+}
+.footer-phones {
+    position: relative;
+}
+.footer-phones img {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+/**/
 @media (max-width: 880px) {
     .header {
         background-position: center;
