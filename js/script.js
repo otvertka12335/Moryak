@@ -1,23 +1,3 @@
-$(document).ready(function () {
-    // $('.header-center .nav-tab').click(function () {
-    //     $('.nav-tab').removeClass("active");
-    //     $(this).addClass("active");
-    // });
-
-    $(function () {
-        $('.header').on('mousemove', function (e) {
-            $('').css({
-                marginLeft: -e.pageX / 10 + 100,
-                marginTop: -e.pageY / 10 + 100
-            })
-            $('').css({
-                marginLeft: e.pageX / 50 + 100,
-                marginTop: e.pageY / 50 + 100
-            })
-        })
-    })
-});
-
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
